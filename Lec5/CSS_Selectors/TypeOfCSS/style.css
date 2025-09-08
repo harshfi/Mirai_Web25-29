@@ -1,0 +1,17 @@
+/* *{
+    background-color: aqua;
+} */
+
+.bioData{
+    border: 1px solid black;
+    background-color: aqua;
+}
+
+#name{
+    color:pink;
+    background-color : blue;
+
+}
+.info{
+    background-color: azure;
+}
