@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            border:2px solid black;
+            font-size: large;
+        }
+        /* .name::after{
+          content: " Chintu";
+        } */
+
+        .name::before{
+            content: "Chintu ";
+        }
+        .parent{
+            border: 5px solid black;
+        }
+        .child1{
+            width:200px;
+            height: 200px;
+            border:2px solid blue;
+            float:left
+        }
+        .child2{
+            width:200px;
+            height:200px;
+            border: 2px solid red;
+            float: right;
+        }
+        /* .fix{
+            clear:both;
+        } */
+        .parent::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p class="name">Tripathi</p> -->
+
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <!-- <div class="fix"></div> -->
+    </div>
+</body>
+</html>
