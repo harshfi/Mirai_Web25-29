@@ -1,0 +1,47 @@
+*{
+    margin-top: 0px;
+}
+.container{
+    width:800px;
+   border: 2px solid black;
+   margin: auto;
+   margin-top: 0px;
+}
+nav{
+    border: 3px solid blue;
+    width: 796px;
+    /* margin: 10px; */
+    position: fixed;
+    top: 0%;
+    background-color: black;
+
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: 20px;
+}
+.para{
+    margin-top: 50px;
+}
+
+.home{
+    margin-right: 100px;
+    font-size: 30px;
+
+}
+
+.para h3{
+    border:2px solid yellow;
+    width:90px;
+    text-align: center;
+    background-color: bisque;
+    margin-left: -100px;
+    position: sticky;
+    top:70px;
+}
+
+.para h3:hover{
+    cursor: pointer;
+    background-color: aqua;
+}
