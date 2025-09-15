@@ -1,0 +1,26 @@
+.container{
+    border:2px solid black;
+    width: 800px;
+    height: 400px;
+    display:flex;
+   flex-direction: row; /*  defines the axis of flex box */
+   flex-wrap: wrap;
+   justify-content:center;
+   align-items: center;
+   gap:10%;
+}
+.class{
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+}
+.class7{
+    /* order:-1; */
+}
+.class2{
+    order:1;
+    /* flex-grow: 2; */
+}
+.class3{
+    /* order:2; */
+}
