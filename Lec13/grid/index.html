@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 60vh;
+            width: 60vw;
+        }
+        div{
+            border:2px solid black;
+        }
+        .parent{
+            display: grid;
+            height: 90%;
+            width: 90%;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+            grid-template-areas: "c1 c1 c1"
+                                  "c1 c1 c1"
+                                "c2 c2 c3";
+        }
+        .child1{
+            grid-area: c1;
+        }
+        .child2{
+            grid-area:c2;
+        }
+        .child3{
+            grid-area: c3;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+    </div>
+</body>
+</html>
