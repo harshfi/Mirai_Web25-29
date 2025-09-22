@@ -1,0 +1,53 @@
+*{
+    font-family: sans-serif;
+    margin: 0px;
+}
+.nav{
+    border-bottom: 0.5px solid grey;
+    display: flex;
+    height: 7vh;
+    justify-content: space-between;
+}
+.child1 h1{
+    font-family: serif;
+}
+textarea{
+    border: 0.2px solid rgb(252, 252, 252);
+    font-size: 20px;
+     background-color: aliceblue;
+}
+.search{
+    border:2px solid rgb(255, 255, 255);
+    width:270px;
+    background-color: aliceblue;
+    border-radius: 28px;
+}
+.child1{
+    margin-left: 30px;
+    display: flex;
+    gap:30px;
+    
+}
+.child2{
+    display: flex;
+    /* border: 2px solid black; */
+    gap:10%;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.child2 div{
+    /* border:2px solid black; */
+}
+.image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* margin-left: ; */
+    
+}
+.write span{
+    position: relative;
+    top: -4px;
+    left: -8px;
+}
