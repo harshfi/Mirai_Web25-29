@@ -1,0 +1,121 @@
+Search=  <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- circle -->
+  <circle cx="11" cy="11" r="6"/>
+  <!-- handle -->
+  <line x1="20" y1="20" x2="16.65" y2="16.65"/>
+</svg>
+
+write= <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="24" viewBox="0 0 36 24" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- square -->
+  <rect x="1.5" y="3" width="22" height="18" rx="2" ry="2"/>
+  <!-- pencil -->
+  <path d="M26.5 6.5l-6 6L19 17l2.5-1.5 6-6L26.5 6.5z"/>
+  <!-- pencil tip -->
+  <path d="M24 8l2 2"/>
+</svg>
+
+
+bell icon= <?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b6b6b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- bell body -->
+  <path d="M18 8a6 6 0 10-12 0c0 7-3 8-3 8h18s-3-1-3-8"/>
+  <!-- clapper -->
+  <path d="M13.73 21a2 2 0 01-3.46 0"/>
+</svg>
+
+
+home =  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M3 9 L12 3 L21 9"/>
+  <rect x="6" y="9" width="12" height="12" rx="2" fill="#111"/>
+  <rect x="10" y="13" width="4" height="8" rx="1" fill="#fff"/>
+</svg>
+
+
+bookmark = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M6 4 H18 V20 L12 16 L6 20 V4 Z"/>
+</svg>
+
+
+profile = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="7" r="4"/>
+  <path d="M4 20 C4 14 20 14 20 20"/>
+</svg>
+
+
+stories= <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="5" y="3" width="14" height="18" rx="2"/>
+  <line x1="8" y1="8" x2="16" y2="8"/>
+  <line x1="8" y1="12" x2="16" y2="12"/>
+  <line x1="8" y1="16" x2="13" y2="16"/>
+</svg>
+
+
+stats = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <rect x="5" y="13" width="2.5" height="6"/>
+  <rect x="10.5" y="10" width="2.5" height="9"/>
+  <rect x="16" y="6" width="2.5" height="13"/>
+</svg>
+
+
+group=  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="9" cy="9" r="4"/>
+  <circle cx="16" cy="9" r="3"/>
+  <path d="M3 20 C3 15 15 15 21 20"/>
+</svg>
+
+
+medium = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="9"/>
+  <text x="12" y="14" font-size="6" font-family="Arial, sans-serif" text-anchor="middle" fill="#111">Me</text>
+</svg>
+
+
+small person = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="7" r="4"/>
+  <path d="M6 20 C6 14 18 14 18 20"/>
+</svg>
+
+hand= <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M10 2c.6 0 1 .4 1 1v6"/>
+  <path d="M14 2c.6 0 1 .4 1 1v7"/>
+  <path d="M18 4c.6 0 1 .4 1 1v8"/>
+  <path d="M6 6c.6 0 1 .4 1 1v7"/>
+  <path d="M5 13a7 7 0 0 0 14 0"/>
+</svg>
+
+
+
+comment = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M21 11.5a8.38 8.38 0 0 1-9 8.5c-1.5 0-3-.35-4.25-.96L3 20l1.2-3.6A8.38 8.38 0 0 1 3 11.5a8.5 8.5 0 1 1 17 0z"/>
+</svg>
+
+
+
+minus= 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="12" r="10"/>
+  <line x1="8" y1="12" x2="16" y2="12"/>
+</svg>
+
+
+bookmark= <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+  <line x1="12" y1="7" x2="12" y2="13"/>
+  <line x1="9" y1="10" x2="15" y2="10"/>
+</svg>
+
+
+3 dots= <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+  <circle cx="5" cy="12" r="2"/>
+  <circle cx="12" cy="12" r="2"/>
+  <circle cx="19" cy="12" r="2"/>
+</svg>
+
+
+star= <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill="orange" d="M12 2l2.39 7.26H22l-6.19 4.49L18.18 22 12 17.77 5.82 22l2.37-8.25L2 9.26h7.61L12 2z"/>
+</svg>
+
+

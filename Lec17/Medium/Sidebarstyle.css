@@ -1,0 +1,43 @@
+.link div{
+    
+    display: flex;
+    align-items: end;
+    width:80%;
+    margin-left:20px;
+    margin-top: 10px;
+}
+.link{
+    margin-top:20px;
+    padding-bottom: 10px;
+    
+}
+.link div p{
+    font-size: small;
+    color:grey;
+}
+.link div :hover{
+    cursor: pointer;
+    color: black;
+}
+
+.sidebar_bottom{
+    /* border: 2px solid black; */
+    margin-top: 25px;
+}
+.sidebar_bottom div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+    color: grey;
+}
+
+.xs{
+    font-size: 9px;
+}
+.m{
+    margin-left: 10px;
+}
+.sidebar_bottom div:hover{
+    color: black;
+}

@@ -1,0 +1,23 @@
+.container{
+    border:2px solid black;
+    margin-top: 40px;
+    width: 100vw;;
+    display: flex;
+    height: 100vh;
+    align-content: stretch;
+    position: fixed;
+}
+.container div{
+     /* border:2px solid black; */
+}
+.sidebar{
+    width:20%;
+    border-right: 0.2px solid grey;
+}
+.content{
+    width:55%;
+}
+.right_sidebar{
+    width:25%;
+
+}
