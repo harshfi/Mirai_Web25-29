@@ -1,0 +1,65 @@
+.right_sidebar{
+    /* border:2px solid black; */
+    padding-left: 20px;
+    height: 110vh;;
+    overflow-y: scroll;
+    border-left:0.5px solid lightgray; ;
+}
+
+.right_sidebar div{
+    /* border:2px solid black */
+}
+
+.staff{
+    height: 85vh;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    
+}
+.p_img{
+    height:18px;
+    width:18px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3P_bqAOf8yeYDXvPk6yeMzueBJAv3uRuslw&s");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.profile_staff{
+display:flex;
+gap:3%;
+align-items: center;
+}
+
+.profile_staff:hover{
+ cursor: pointer;
+ text-decoration: underline;
+}
+
+.staff_card{
+    height: 140px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recommend{
+    height: 400px;
+    margin-top: 100px;
+}
+.topics{
+    margin-top:15px;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:3%
+}
+.topics div{
+    height: 30px;
+    width: 40%;
+    background-color: lightgray;
+    border-radius: 20px;
+    text-align: center;
+    padding-top:5px ;
+    /* padding: 8px; */
+}
