@@ -1,0 +1,54 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+div{
+    border:2px solid black;
+}
+.nav{
+    background-color:lightblue;
+    width:97vw;
+    height: 40px;;
+    padding-top: 10px;
+    padding: 10px 20px;
+}
+.home{
+    float:left
+}
+.get{
+    float:right
+}
+.main{
+    width:700px;
+    height:400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap:5%;
+    padding-top: 40px ;
+    justify-content: space-around;
+}
+.card{
+    width:200px;
+    height: 100px;
+}
+
+@media (max-width: 1200px)  {
+  .main{
+    width:90vw;
+    gap:3%;
+    border:2px solid red;
+  }
+}
+@media (max-width: 500px){
+    .main{
+        border: none;
+    }
+    .card{
+        width:80%;
+        margin: 10px auto;;
+    }
+}
+
+
+

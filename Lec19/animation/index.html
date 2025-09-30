@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .container{
+            height:100px;
+            width:450px;
+            border: 2px solid black;
+            margin:200px auto;
+        }
+        .loader{
+            height: 100%;
+            width:0%;
+            background-color: orange;
+            transition-duration: 2s;
+        }
+        .container:hover .loader{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+</body>
+</html>

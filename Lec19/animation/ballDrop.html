@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        height:600px;
+        width:800px;
+        border:2px solid red;
+        margin: 100px auto;
+    }
+    .ball{
+        border: 2px solid black;
+        margin: 0px auto;
+        height: 100px;
+        width:100px;
+        background-color: aquamarine;
+        border-radius: 50%;
+        animation-name: drop;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes drop{
+        0%{
+            transform: translateY(0px);
+        }
+        49%{
+            height:97px ;
+            width:104px
+        }
+        50%{
+            transform: translateY(481px);
+             height:95px ;
+            width:107px
+        }
+         52%{
+             height:97px ;
+            width:104px
+         }
+         56%{
+                height:100px ;
+                width:100px
+         }
+        100%{
+            transform: translateY(0px);
+        }
+    } 
+    hr{
+        border:10px solid green;
+        margin-top:480px;
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+        <hr>
+    </div>
+</body>
+</html>
