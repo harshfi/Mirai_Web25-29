@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            height: 400px;
+            width: 250px;
+            border:2px solid black;
+            margin:100px auto;
+            position: relative;
+            transition-duration: 2s;
+            transform-style: preserve-3d;
+
+        }
+        .a,.b{
+            height:100%;
+            width: 100%;
+            position: absolute;
+
+        }
+        .a{
+            background-color: rgb(13, 255, 0);
+            z-index: 1;
+            background-image: url("https://uk.blitzindiamedia.com/wp-content/uploads/2023/09/modi-ji.jpg");
+            background-size: contain;
+            backface-visibility:hidden ;
+        }
+        .b{
+            text-align: center;
+            /* padding-top: 100px; */
+            background-color: aquamarine;
+            transform: rotateY(180deg);
+            /* z-index: 2; */
+        }
+        .card:hover{
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="a"></div>
+        <div class="b">This is Bhondu Genration</div>
+    </div>
+</body>
+</html>
