@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Understanding Arrays in C++ — A Beginner's Blog</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:linear-gradient(180deg,#071024 0%, #081224 60%);color:#e6eef6;line-height:1.6}
+    .container{max-width:980px;margin:48px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;box-shadow:0 8px 30px rgba(2,6,23,0.7)}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#04263b;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin-top:8px}
+
+    main{margin-top:20px}
+    h2{color:#dff6ff;margin-top:28px}
+    h3{color:#d7eef9;margin-top:18px}
+    p{margin:10px 0}
+
+    .card{background:var(--card);padding:18px;border-radius:10px;margin-top:14px;border:1px solid rgba(255,255,255,0.02)}
+
+    pre{overflow:auto;border-radius:8px;padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;font-size:13px;color:#d6f1ff}
+    code{font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+
+    .tips{background:linear-gradient(90deg, rgba(125,211,252,0.06), rgba(96,165,250,0.03));border-left:4px solid var(--accent);padding:10px;border-radius:8px;color:var(--muted);}
+
+    .meta{display:flex;gap:12px;color:var(--muted);font-size:13px;margin-top:8px}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+
+    @media (max-width:640px){.container{margin:18px;padding:18px}.logo{width:44px;height:44px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">C++</div>
+      <div>
+        <h1>Understanding Arrays in C++</h1>
+        <p class="lead">A concise guide for beginners — declaration, initialization, traversal, pitfalls, and alternatives.</p>
+        <div class="meta"><span>Estimated read: 6 min</span><span>•</span><span>Author: Harsh</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>What is an array?</h2>
+        <p>An <strong>array</strong> is a contiguous block of memory that stores elements of the same type. Arrays are useful when you want to group fixed-size collections of values and access them by index.</p>
+        <div class="tips"><strong>Tip:</strong> In C++ array indices start at <code>0</code>. The last element of an array with size <code>n</code> is at index <code>n-1</code>.</div>
+      </section>
+
+      <section class="card">
+        <h2>Declaring and initializing arrays</h2>
+        <p>Static (C-style) arrays are declared with a type and size. Here are common patterns:</p>
+        <pre><code>// declaration (uninitialized)
+int a[5];
+
+// declaration + initialization
+int b[5] = {1, 2, 3, 4, 5};
+
+// partial initialization (rest are zero)
+int c[5] = {10, 20}; // c = {10,20,0,0,0}
+
+// size inferred from initializer
+int d[] = {7, 8, 9}; // size = 3
+
+// character array / string literal (not std::string)
+char s[] = "hi"; // size = 3 (h, i, '\0')
+</code></pre>
+        <p>Be careful: a declaration like <code>int a[-3];</code> is invalid — size must be a constant positive integer in standard C++ (variable-length arrays are not part of standard C++).</p>
+      </section>
+
+      <section class="card">
+        <h2>Accessing and traversing</h2>
+        <p>Use the index operator <code>[]</code>. Typical traversal uses a <code>for</code> loop.</p>
+        <pre><code>for (int i = 0; i < 5; ++i) {
+    std::cout << a[i] << '\n';
+}
+
+// C++ range-based for (since C++11)
+for (int x : b) {
+    std::cout << x << '\n';
+}
+</code></pre>
+        <p>Always ensure the index is within bounds. Accessing out-of-range indices causes undefined behavior.</p>
+      </section>
+
+      <section class="card">
+        <h2>Multidimensional arrays</h2>
+        <pre><code>// 2D array 3x4
+int mat[3][4];
+
+// initialize
+int grid[2][3] = {{1,2,3},{4,5,6}};
+
+// iterate
+for (int i = 0; i &lt; 2; ++i)
+  for (int j = 0; j &lt; 3; ++j)
+    std::cout &lt;&lt; grid[i][j] &lt;&lt; ' ';
+</code></pre>
+        <p>Multidimensional arrays are stored in row-major order in memory.</p>
+      </section>
+
+      <section class="card">
+        <h2>Passing arrays to functions</h2>
+        <p>When you pass a built-in array to a function, it decays to a pointer to its first element — the function loses knowledge of the array size:</p>
+        <pre><code>void printArr(int *arr, int n) {
+  for (int i = 0; i &lt; n; ++i) std::cout &lt;&lt; arr[i] &lt;&lt; '\n';
+}
+
+int main() {
+  int a[3] = {10,20,30};
+  printArr(a, 3); // pass pointer + size
+}
+</code></pre>
+        <p>If you want safer alternatives that preserve size information, see <code>std::array</code> and <code>std::vector</code> below.</p>
+      </section>
+
+      <section class="card">
+        <h2>Common pitfalls</h2>
+        <ul>
+          <li>Out-of-bounds access → undefined behavior (often crashes or silent bugs).</li>
+          <li>Uninitialized arrays contain garbage values when declared without initialization.</li>
+          <li>Beware of pointer decay when passing arrays to functions.</li>
+          <li>Using <code>sizeof</code> on a decayed pointer won't give array size. Use template helper or pass size explicitly.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Modern C++ alternatives</h2>
+        <p>Prefer these in most cases:</p>
+        <pre><code>// fixed-size container (wraps C-style array)
+#include &lt;array&gt;
+std::array&lt;int,5&gt; arr = {1,2,3,4,5};
+
+// dynamic-size container
+#include &lt;vector&gt;
+std::vector&lt;int&gt; vec = {1,2,3};
+vec.push_back(4);
+
+// safer traversal
+for (auto &x : vec) std::cout &lt;&lt; x &lt;&lt; '\n';
+</code></pre>
+        <p><code>std::array</code> keeps size information and behaves like a stack-allocated fixed-size array. <code>std::vector</code> is dynamic, manages memory, and is the go-to container for variable-length arrays.</p>
+      </section>
+
+      <section class="card">
+        <h2>Examples — small programs</h2>
+        <pre><code>// Example: sum of elements
+int sum(int *a, int n) {
+  int s = 0;
+  for (int i = 0; i &lt; n; ++i) s += a[i];
+  return s;
+}
+
+// Example: reverse an array in-place
+void reverseArr(int a[], int n) {
+  for (int i = 0; i &lt; n/2; ++i)
+    std::swap(a[i], a[n-1-i]);
+}
+</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>Quick reference</h2>
+        <ul>
+          <li><strong>Indexing:</strong> <code>a[i]</code> (0 ≤ i &lt; n)</li>
+          <li><strong>Size known at compile-time:</strong> use <code>std::array</code> or built-in array</li>
+          <li><strong>Dynamic size:</strong> use <code>std::vector</code></li>
+          <li><strong>Strings:</strong> prefer <code>std::string</code> over <code>char[]</code> for safer string handling</li>
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>Liked this? Try writing small programs yourself — practice is the fastest way to learn.</div>
+      <div>© 2025 Arrays in C++ Guide</div>
+    </footer>
+  </div>
+</body>
+</html>
