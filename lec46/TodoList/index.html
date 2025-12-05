@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin-top: 100px;
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+        }
+        .btn{
+            width: 100px;
+            height: 35px;
+            font-size: 20px;
+        }
+        ul{
+            margin:auto;
+            
+           
+            padding: 0;
+        }
+        li{
+            border: 2px solid black;
+            margin: auto;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 24px;
+
+            /* margin: 10px 0; */
+            width: 300px;
+        }
+        button{
+            margin: 5px;
+            font-size: 24px;
+            height: 35px;
+        }
+        .editbox{
+            height: 400px;
+            width:500px;
+            border: 2px solid black;
+            margin: auto;
+            display: none;
+            position: relative;
+    top: -251px;
+    background-color: grey;
+    z-index: 1;;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Todo List</h1>
+
+    <input type="text" id="input" placeholder="Enter a new task" />
+    <button id="addTaskBtn">Add Task</button>
+    <ul>
+        <!-- Tasks will be added here -->
+         <!-- <li>
+            Sample Task
+
+            <button>delete</button>
+            <button>increase</button>
+            <button>decrese</button>
+            <button>update</button>
+         </li> -->
+    </ul>
+
+    <div class="editbox">
+        <input type="text" id="editInput" />
+         <button id="saveBtn">Save</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
